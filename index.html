@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Shape with Paragraph</title>
+    <style>
+        /* Container for the heart shape and paragraph */
+        .heart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for each heart */
+        .heart {
+            font-size: 40px;
+            color: red;
+            position: absolute;
+            transition: transform 1s ease-in-out;
+        }
+
+        /* Style for the paragraph */
+        .heart-container p {
+            font-size: 18px;
+            text-align: center;
+            max-width: 200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Positioning hearts in a heart shape */
+        .heart:nth-child(1) { top: 30px; left: 100px; ;}
+        .heart:nth-child(2) { top: 0px; left: 0px; }
+        .heart:nth-child(3) { top: 0px; right: 50px; }
+        .heart:nth-child(4) { top: 80px; left: -40px; }
+        .heart:nth-child(5) { top: 80px; right: 20px; }
+        .heart:nth-child(6) { top: 180px; left: 10px; }
+        .heart:nth-child(7) { top: 180px; right: 50px; }
+        .heart:nth-child(8) { top: 240px; left: 100px; }
+        .heart:nth-child(9) { top: 180px; left: 10px; }
+        .heart:nth-child(10) { top: 180px; right: 50px; }
+        .heart:nth-child(11) { top: 240px; left: 100px; }
+        p{
+            font-weight: 900;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div class="heart-container">
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <p></p>
+        
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+    </div>
+</main>
+    <script>
+        function live(){
+        let hearts = document.getElementsByTagName('span');
+
+        function zoomInAndOut(element) {
+            // Zoom in
+            element.style.transform = 'scale(1.5)';
+
+            // After 1 second, zoom out
+            setTimeout(() => {
+                element.style.transform = 'scale(0)';
+            }, 1000);
+        }
+
+        // Apply the zoom effect to all span elements after 1 second
+        setTimeout(() => {
+            for (let i = 0; i < hearts.length; i++) {
+                zoomInAndOut(hearts[i]);
+            }
+        }, 1000);}
+        setInterval(live,2000);
+        let p = document.getElementsByTagName('p');
+
+        function live1(){
+            p[0].innerHTML="Hello❤️sunshine";
+        }
+        function live2(){
+            p[0].innerHTML="❤️Just wanna say Good morning!☀️";
+        }
+        function live3(){
+            p[0].innerHTML="Hope your day is filled with more laghter😂 \n and Joy too🥰🥺";
+        }
+        function live4(){
+            p[0].innerHTML="Keep smiling😊";
+        }
+        function live5(){
+            p[0].innerHTML="Hlezi uazi ntwana yakho yakthandanda😘";
+        }
+        
+        setInterval(live1,3000);
+        setInterval(live2,6000);
+        setInterval(live3,9000);
+        setInterval(live4,12000);
+        setInterval(live5,15000);
+    </script>
+</body>
+</html>
