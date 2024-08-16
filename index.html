@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart Shape with Paragraph</title>
+    <title>Terry</title>
     <style>
         /* Container for the heart shape and paragraph */
         .heart-container {
@@ -32,6 +32,9 @@
             position: relative;
             z-index: 1;
         }
+        body{
+            background-color: wheat;
+        }
 
         /* Positioning hearts in a heart shape */
         .heart:nth-child(1) { top: 30px; left: 100px; ;}
@@ -44,10 +47,16 @@
         .heart:nth-child(8) { top: 240px; left: 100px; }
         .heart:nth-child(9) { top: 180px; left: 10px; }
         .heart:nth-child(10) { top: 180px; right: 50px; }
-        .heart:nth-child(11) { top: 240px; left: 100px; }
+        .heart:nth-child(11) { top: 300px; left: 100px; }
+        .heart:nth-child(12) { top: 350px; left: 100px; }
+        .heart:nth-child(13) { top: 330px; left: 100px; }
+        .heart:nth-child(14) { top: 370px; left: 100px; }
         p{
             font-weight: 900;
             font-size: 2rem;
+        }
+        span{
+            display: none;
         }
     </style>
 </head>
@@ -63,9 +72,6 @@
         <span class="heart">❤️</span>
         <span class="heart">❤️</span>
         <p></p>
-        
-        <span class="heart">❤️</span>
-        <span class="heart">❤️</span>
         <span class="heart">❤️</span>
         <span class="heart">❤️</span>
         <span class="heart">❤️</span>
@@ -74,12 +80,38 @@
     </div>
 </main>
     <script>
+
+        
+        let date = new Date();
+        let hour = date.getHours();
+        // alert(hour)
         function live(){
         let hearts = document.getElementsByTagName('span');
-
+        let before =0;
+        setTimeout(bb1,100);setTimeout(bb2,200);
+        setTimeout(bb3,300);setTimeout(bb4,400);
+        setTimeout(bb5,500);setTimeout(bb6,600);
+        setTimeout(bb7,700);setTimeout(bb8,800);
+        setTimeout(bb9,900);setTimeout(bb10,1000);
+        setTimeout(bb11,1100);//setTimeout(bb12,1200);
+        // setTimeout(bb13,1300);setTimeout(bb14,1400);
+        function bb1(){hearts[0].style.display="block";}
+        function bb2(){hearts[1].style.display="block";}
+        function bb3(){hearts[2].style.display="block";}
+        function bb4(){hearts[3].style.display="block";}
+        function bb5(){hearts[4].style.display="block";}
+        function bb6(){hearts[5].style.display="block";}
+        function bb7(){hearts[6].style.display="block";}
+        function bb8(){hearts[7].style.display="block";}
+        function bb9(){hearts[8].style.display="block";}
+        function bb10(){hearts[9].style.display="block";}
+        function bb11(){hearts[10].style.display="block";}
+        // function bb12(){hearts[11].style.display="block";}
+        // function bb13(){hearts[12].style.display="block";}
+        // function bb14(){hearts[13].style.display="block";}
         function zoomInAndOut(element) {
             // Zoom in
-            element.style.transform = 'scale(1.5)';
+            element.style.transform = 'scale(2)';
 
             // After 1 second, zoom out
             setTimeout(() => {
@@ -95,28 +127,67 @@
         }, 1000);}
         setInterval(live,2000);
         let p = document.getElementsByTagName('p');
-
-        function live1(){
-            p[0].innerHTML="Hello❤️sunshine";
+            //Morning
+        if(hour>=6&&hour<12){
+            function live1(){
+                p[0].innerHTML="Hello❤️";
+            }
+            function live2(){
+                p[0].innerHTML="❤️Just wanna say Good morning!☀️";
+            }
+            function live3(){
+                p[0].innerHTML="Hope your day is filled with more laghter😂 \n and Joy too🥰🥺";
+            }
+            function live4(){
+                p[0].innerHTML="Smile😊 and laugh😊";
+            }
+            function live5(){
+                p[0].innerHTML="🫀I love you😘";
+            }
         }
-        function live2(){
-            p[0].innerHTML="❤️Just wanna say Good morning!☀️";
+        //Day
+        if(hour>=12&&hour<20){
+            function live1(){
+                p[0].innerHTML="Hey there! 😊";
+            }
+            function live2(){
+                p[0].innerHTML="❤️Just wanted to wish you a wonderful day";
+            }
+            function live3(){
+                p[0].innerHTML="Hope your day is filled with more laghter😂 \n and Joy too🥰🥺";
+            }
+            function live4(){
+                p[0].innerHTML="Keep smiling😊";
+            }
+            function live5(){
+                p[0].innerHTML="Hlezi uazi ntwana yakho yakthandanda😘";
+            }
         }
-        function live3(){
-            p[0].innerHTML="Hope your day is filled with more laghter😂 \n and Joy too🥰🥺";
-        }
-        function live4(){
-            p[0].innerHTML="Keep smiling😊";
-        }
-        function live5(){
-            p[0].innerHTML="Hlezi uazi ntwana yakho yakthandanda😘";
+        //Night
+        if((hour>=20&&hour<=24)||(hour>=0&&hour<6)){
+            function live1(){
+                p[0].innerHTML="Hey❤️";
+            }
+            function live2(){
+                p[0].innerHTML="❤️ Good night!☀️";
+            }
+            function live3(){
+                p[0].innerHTML="Hope you slee well🥰🥺";
+            }
+            function live4(){
+                p[0].innerHTML="Sweet dreams😊";
+            }
+            function live5(){
+                p[0].innerHTML="Azi yakho yakfatela macala wami😘";
+            }
         }
         
-        setInterval(live1,3000);
-        setInterval(live2,6000);
-        setInterval(live3,9000);
-        setInterval(live4,12000);
-        setInterval(live5,15000);
+        setInterval(live1,5000);
+        setInterval(live2,9000);
+        setInterval(live3,13000);
+        setInterval(live4,15000);
+        setInterval(live5,18000);
+    
     </script>
 </body>
 </html>
